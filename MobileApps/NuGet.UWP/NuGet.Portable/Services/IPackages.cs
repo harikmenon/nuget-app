@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace NuGet.Portable.Services
 {
-    public interface IMyPackages
+    public interface IPackages
     {
-       IEnumerable<Datum> GetMyPackages();
+        Task<IEnumerable<Datum>> GetMyPackages();
     }
 }

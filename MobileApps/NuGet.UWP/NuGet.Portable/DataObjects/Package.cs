@@ -6,60 +6,46 @@ using System.Threading.Tasks;
 
 namespace NuGet.Portable
 {
-    public class Package
+    public class Version
     {
-        public IEnumerable<string> Authors
-        {
-            get;
-            set;
-        }
+        public string version { get; set; }
+        public int downloads { get; set; }
+    }
 
-        public string Description
-        {
-            get;
-            set;
-        }
+    public class Datum
+    {
+        public string id { get; set; }
 
-        public string Title
-        {
-            get;
-            set;
-        }
+        public string registration { get; set; }
 
-        public string Owners
-        {
-            get;
-            set;
-        }
+        public string description { get; set; }
 
-        public string ReleaseNotes
-        {
-            get;
-            set;
-        }
+        public string summary { get; set; }
 
-        public string Summary
-        {
-            get;
-            set;
-        }
+        public string title { get; set; }
 
-        public string ProjectUrl
-        {
-            get;
-            set;
-        }
+        public string iconUrl { get; set; }
 
-        public string IconUrl
-        {
-            get;
-            set;
-        }
+        public string licenseUrl { get; set; }
 
-        public string LicenseUrl
-        {
-            get;
-            set;
-        }
+        public string projectUrl { get; set; }
+
+        public List<string> tags { get; set; }
+
+        public List<string> authors { get; set; }
+
+        public int totalDownloads { get; set; }
+
+        public string version { get; set; }
+
+        public List<Version> versions { get; set; }
+    }
+
+    public class RootObject
+    {
+        public int totalHits { get; set; }
+        public string lastReopen { get; set; }
+        public string index { get; set; }
+        public List<Datum> data { get; set; }
     }
 }

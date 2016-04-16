@@ -10,11 +10,18 @@ namespace NuGet.Portable.ViewModels
 {
     public class MyPackagesViewModel:MvxViewModel
     {
+        public string Name
+        {
+            get;
+            set;
+        }
+
         readonly IMyPackages myPackages;
 
         public MyPackagesViewModel(IMyPackages myPackages)
         {
             this.myPackages = myPackages;
+            Name = "Bazzinga";
         }
 
         public override void Start()

@@ -15,7 +15,9 @@ namespace NuGet.Portable
         public App()
         {
             Mvx.RegisterType<IMyPackages, MyPackages>();
+            Mvx.RegisterType<IPackages, Packages>();
             Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<MyPackagesViewModel>());
+            Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<PackagesViewModel>());
         }
     }
 }
